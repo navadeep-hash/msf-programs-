@@ -1,0 +1,11 @@
+x=0
+y=0
+e=0.01
+for i in range(20):
+    x_new=(10-y)/2
+    y_new=(10-x_new)/2
+    if abs(x_new-x)<=e:
+        break
+    x, y= x_new, y_new
+
+print('gaussseidal:',x_new,y_new)

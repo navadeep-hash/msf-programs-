@@ -1,0 +1,11 @@
+e=0.01
+x=0
+y=0
+for i in range(20) :
+    x_new=(10-y)/2
+    y_new=(10-x)/2
+    if abs(x_new-x)<=e:
+        break
+    x, y= x_new, y_new
+
+print('solution:',x_new, y_new)

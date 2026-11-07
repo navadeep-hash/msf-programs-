@@ -1,0 +1,19 @@
+def f(x):
+    return x*x-3*x+2
+def bisection(a, b, e):
+    if f(a) *f(b) > 0:
+        print('invalid interval')
+        return
+    while b-a>=e:
+        c=(a+b)/2
+        if f(c)==0:
+            break
+        elif f(a)*f(c)<0:
+            b=c
+        else:
+            a=c
+        print('root', c)
+a=float(input('enter a'))
+b=float(input('enter b'))
+e=float(input ('enter e'))
+bisection (a, b, e)

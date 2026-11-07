@@ -1,0 +1,15 @@
+def f(x):
+    return x*x-3*x+2
+def df(x):
+    return 2*x-3
+def newton_raphson(x0, e):
+    x1=x0
+    while True:
+        x0=x1
+        x1=x0-(f(x0)/df(x0))
+        if abs(x1-x0) <=e:
+            break
+    print('root', x1)
+x0=float(input('enter x0'))
+e=float(input ('enter e'))
+newton_raphson(x0, e)
